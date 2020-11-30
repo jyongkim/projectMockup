@@ -8,6 +8,8 @@
         initial-scale=1.0,
         maximun-scale=3"> <!-- El zoom original en las páginas es de 5 (500%), con 3 se limita a 300% -->
     <title>Maquetación Web</title>
+    <link rel="icon" href="assets/icon/cr.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body> <!-- Parte VISIBLE: contenido -->
     <!-- header#header>(.header>h1{Maquetación Web}+p{html &amp; css})+nav -->
@@ -16,19 +18,43 @@
             <h1>Maquetación Web</h1>
             <p>html &amp; css</p>
         </div>
-        <nav></nav> <!--NAVEGACIÓN: índice -->
+        <nav>
+            <!-- ul.menu>li*4>a -->
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="">GitHub</a></li> <!-- No poner redes sociales en la barra de navegación, esto es como ejemplo-->
+            </ul>
+        </nav> <!--NAVEGACIÓN: índice -->
     </header>
     <main> <!-- CONTENIDO PRINCIPAL: nudo -->
         <!-- section*2>(header.header>h1{Clase $})+article*3>header>h1{Tema $} -->
         <!-- Puedo poner varios h1 y el navegador entiende la jerarquía -->
         <section> <!-- SECCIÓN: parte del contenido; depende del contexto -->
             <header class="header">
-                <h1>Clase 1</h1>
+                <h1>Introducción a la maquetación.</h1>
             </header>
             <article> <!-- ARTÍCULO: contenido independiente -->
                 <header>
-                    <h1>Tema 1</h1>
+                    <h1>Elementos semánticos</h1>
                 </header>
+                <!-- ul.example>li*3>strong -->
+                <ul class="example">
+					<li><strong>HEADER</strong> Es el contenido introductorio que contiene los títulos principales, a veces suele tener una galeria a modo de presentación y también la navegación.
+						<ul>
+							<li><strong>NAV</strong> Es la navegación principal y donde se encuentran solamente los links mas importantes de nuestro sitio.</li>
+						</ul>
+					</li>
+					<li><strong>MAIN</strong> Es el contenido principal donde colocamos la información relevante para el usuario, la mayoría de los elementos se encontrarán adentro.
+						<ul>
+							<li><strong>SECTION</strong> Elemento que forma parte del contenido, depende del contexto y solamente funciona dentro de la página, ya que está ligado al contenido de la misma.</li>
+							<li><strong>ARTICLE</strong> Elemento independiente al contexto, funciona tanto dentro como fuera de la página y debe ser autoconclusivo.</li>
+							<li><strong>ASIDE</strong> Elemento lateral o contenido tangencial que guarda una relación indirecta con sus elementos hermanos.</li>
+						</ul>
+					</li>
+					<li><strong>FOOTER</strong> Es el contenido de desenlace, podemos encontrar información del autor, datos y/o formularios de contacto, mapas del sitio e incluso links a las redes sociales.</li>
+				</ul>
             </article>
             <article>
                 <header>
@@ -66,6 +92,26 @@
                 </address>
             </footer>
         </section>
+        <section>
+			<header class="header">
+				<h1>Clase 2</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</article>
+		</section>
     <!--
         <article></article> ARTÍCULO: independiente.
         <section></section> SECCIÓN: depende del contexto.
@@ -73,7 +119,8 @@
     -->
     </main>
     <footer> <!-- PIE: descenlace-->
-
     </footer>
+    <script src="js/scripts.js"></script> <!-- SCRIPTS-->
 </body>
+
 </html>

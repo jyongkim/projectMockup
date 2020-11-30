@@ -1,0 +1,29 @@
+/*Reglas generales*/
+
+* {
+    box-sizing: border-box;
+                /*
+				content-box:
+					final-width = width + padding + border;
+					content-width = width;
+				border-box:
+					final-width = width;
+					content-width = width - padding - border;
+                */
+    font-family: Raleway, Open sans, Segoe ui, sans-serif;
+}
+
+h1 {
+    width: 300px;
+    padding: 25px;
+    border: 5px solid;
+    background-color: gray;
+}
+
+/*Cabecera y pie*/
+
+/*Navegación*/
+
+/*Contenido principal*/
+
+/*Formulario*/
