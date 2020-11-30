@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- Parte NO VISIBLE: configuraciones -->
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximun-scale=3"> <!-- El zoom original en las páginas es de 5 (500%), con 3 se limita a 300% -->
+    <title>Maquetación Web</title>
+</head>
+<body> <!-- Parte VISIBLE: contenido -->
+    <!-- header#header>(.header>h1{Maquetación Web}+p{html &amp; css})+nav -->
+    <header id="header"> <!-- CABECERA: introducción--> <!---->
+        <div class="header"> <!-- ¿Quiénes somos?-->
+            <h1>Maquetación Web</h1>
+            <p>html &amp; css</p>
+        </div>
+        <nav></nav> <!--NAVEGACIÓN: índice -->
+    </header>
+    <main> <!-- CONTENIDO PRINCIPAL: nudo -->
+        <!-- section*2>(header.header>h1{Clase $})+article*3>header>h1{Tema $} -->
+        <!-- Puedo poner varios h1 y el navegador entiende la jerarquía -->
+        <section> <!-- SECCIÓN: parte del contenido; depende del contexto -->
+            <header class="header">
+                <h1>Clase 1</h1>
+            </header>
+            <article> <!-- ARTÍCULO: contenido independiente -->
+                <header>
+                    <h1>Tema 1</h1>
+                </header>
+            </article>
+            <article>
+                <header>
+                    <h1>Tema 2</h1>
+                </header>
+            </article>
+            <article>
+                <header>
+                    <h1>Tema 3</h1>
+                </header>
+            </article>
+        </section>
+        <section>
+            <header class="header">
+                <h1>Clase 2</h1>
+            </header>
+            <article>
+                <header>
+                    <h1>Tema 1</h1>
+                </header>
+            </article>
+            <article>
+                <header>
+                    <h1>Tema 2</h1>
+                </header>
+            </article>
+            <article>
+                <header>
+                    <h1>Tema 3</h1>
+                </header>
+            </article>
+            <footer>
+                <address>
+                    Para más información consultar <a href="https://parrot.acamica.com/" target="_blank">Parrot</a>
+                </address>
+            </footer>
+        </section>
+    <!--
+        <article></article> ARTÍCULO: independiente.
+        <section></section> SECCIÓN: depende del contexto.
+        <aside></aside> LATERAL: contenido tangencial.
+    -->
+    </main>
+    <footer> <!-- PIE: descenlace-->
+
+    </footer>
+</body>
+</html>
