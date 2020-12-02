@@ -1,31 +1,129 @@
 /*Reglas generales*/
+@import url(
+    'https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,400;1,200&family=Texturina:ital,wght@0,400;0,800;1,400&display=swap'
+);
 
 * {
-    box-sizing: border-box;
-                /*
-				content-box:
-					final-width = width + padding + border;
-					content-width = width;
-				border-box:
-					final-width = width;
-					content-width = width - padding - border;
-                */
-    font-family: Raleway, Open sans, Segoe ui, sans-serif;
+box-sizing: content-box;
+    /*
+    content-box:
+        final-width = width + padding + border;
+        content-width = width;
+    border-box:
+        final-width = width;
+        content-width = width - padding - border;
+    */
+font-family: Raleway, Open sans, Segoe ui, sans-serif;
 }
 
-h1 {
-    width: 300px;
-    padding: 25px;
-    border: 5px solid;
-    background-color: gray;
+body{
+    margin:0;
 }
 
 /*Cabecera y pie*/
+#header
+main .header,
+#footer{
+    padding: 16px;
+    color: #ddd; /*ROJO ROJO VERDE VERDE AZUL AZUL = dec(0 -255) */
+    background-color: #333;
+    font-size: 18px;
+    background-image: url(../assets/img/osx-mojave-night.jpg);
+    background-position: top center; /*x y*/
+    background-repeat: no-repeat;
+    background-size: cover; /*x y*/
+    background-attachment: fixed;
+}
+
+main .header h1{
+    line-height: 200px;
+}
+
+#footer{
+    background-position: center;
+}
+
+.header h1,
+.header p{
+    margin: 0;
+	line-height: 24px;
+
+}
+.header h1{
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+.header p{
+    text-transform: uppercase;
+	letter-spacing: 8px;
+}
 
 /*Navegación*/
+.menu{
+    list-style: none;
+    margin:4px -16px 8px; /*Top, right, bottom y left */
+    padding: 0;
+    background-color: rgba(206,206,206, .3);
+}
+
+.menu a{
+    color:#ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu li{
+    display: inline-block;
+    padding:8px;
+    /*
+        BLOCK: 
+            Ocupa todo el espacio de su contenedor, 
+            genera salto de linea (no comparte espacio) y
+            se les puede definir tamaño (contenedores);
+        INLINE:
+            Ocupa en ancho de su contenido,
+            comparte espacio con otras etiquetas y
+            su tamaño es automatico - ancho (contenido);
+        INLINE-BLOCK:
+            ocupa el ancho de su contenido,
+            compartes espacios con otras etiquetas y
+            se les puede definir tamaño - ancho/alto (contenido);
+    */
+}
+
+.menu li:hover{
+    background-color: rgba(206,206,206,.3);
+}
 
 /*Contenido principal*/
 
+main{
+    max-width:1140px;
+    margin: auto;
+    padding:16px;/*top right bottom left*/
+}
+
+.example{
+    list-style: none;
+    margin-left: 48px;
+    border-left: 2px solid #333;/*width style color*/
+    padding: 16px;
+    background-color: #ddd;
+}
+
 /*Formulario*/
+
+#contact{
+    max-width: 720px;
+    margin: auto;
+}
+#contact input,
+#contact textarea{
+    width:100%;
+    padding:8px 16px;
+}
+#contact button{
+    display:block;
+    margin-left: auto;
+}
 
 /*Cambio el brach por defecto a master en GitHub*/

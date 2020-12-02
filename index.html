@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta
         name="viewport"
-        content="width=device-width,
+        content="
+        width=device-width,
         initial-scale=1.0,
         maximun-scale=3"> <!-- El zoom original en las páginas es de 5 (500%), con 3 se limita a 300% -->
     <title>Maquetación Web</title>
     <link rel="icon" href="assets/icon/cr.png">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body> <!-- Parte VISIBLE: contenido -->
     <!-- header#header>(.header>h1{Maquetación Web}+p{html &amp; css})+nav -->
     <header id="header"> <!-- CABECERA: introducción--> <!---->
         <div class="header"> <!-- ¿Quiénes somos?-->
             <h1>Maquetación Web</h1>
-            <p>html &amp; css</p>
+            <p>HTML &amp; CSS</p>
         </div>
-        <nav>
+        <nav> <!-- NAVEGACIÓN: índice -->
             <!-- ul.menu>li*4>a -->
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li><a href="">GitHub</a></li> <!-- No poner redes sociales en la barra de navegación, esto es como ejemplo-->
+                <li><a title="inicio" href="#">Inicio</a></li>
+                <li><a title="acerca" href="about.html">Acerca de</a></li>
+                <li><a title="contacto" href="#contact">Contacto</a></li>
+                <li><a title="github" href="https://github.com/jyongkim/project_mockup" target="_blank">GitHub</a></li> <!-- No poner redes sociales en la barra de navegación, esto es como ejemplo-->
             </ul>
-        </nav> <!--NAVEGACIÓN: índice -->
+        </nav>
     </header>
     <main> <!-- CONTENIDO PRINCIPAL: nudo -->
         <!-- section*2>(header.header>h1{Clase $})+article*3>header>h1{Tema $} -->
@@ -58,14 +60,42 @@
             </article>
             <article>
                 <header>
-                    <h1>Tema 2</h1>
+                    <h1>Jerarquia de selectores CSS</h1>
                 </header>
+                <ul class="example">
+					<li>
+						<strong>Tag selector: </strong> es aquel que apunta a un tipo de etiqueta, si bien se pueden combinar es el menos especifico y por lo tanto al ser muy general con respecto a los demas, es el que posee menor prioridad ya que no permite distinguir entre las etiquetas que seleccionamos.
+						<ul>
+							<li><span>header</span>{color:darkred}</li>
+							<li><span>header h1</span>{color:tomato}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Class selector: </strong> es aquel que apunta a las clases aplicadas sobre los elementos y se diferencia por la implementacion de un <em>punto (.)</em> antes del nombre de la clase. Especificamente permite seleccionar un grupo de etiquetas, incluso pudiento aclarar que tipo de etiqueta es a la que apuntamos.
+						<ul>
+							<li><span>.header</span>{color:darkgreen}</li>
+							<li><span>.header h1</span>{color:limegreen}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>ID selector: </strong> es aquel que apunta al Id de un elemento en particular, se diferencia por la implementacion de un <em>numeral (#)</em>. Es el selector con mayor prioridad porque se considera muy especifico con respecto a los demas, la razon de esto es que no deberian existir mas de una etiqueta con el mismo Id.
+						<ul>
+							<li><span>#header</span>{color:darkblue}</li>
+							<li><span>#header h1</span>{color:skyblue}</li>
+						</ul>
+					</li>
+				</ul>
             </article>
             <article>
                 <header>
                     <h1>Tema 3</h1>
                 </header>
             </article>
+            <footer>
+                <address>
+                    Para más información consultar <a href="https://parrot.acamica.com/" target="_blank">Parrot</a>
+                </address>
+            </footer>
         </section>
         <section>
             <header class="header">
@@ -86,11 +116,6 @@
                     <h1>Tema 3</h1>
                 </header>
             </article>
-            <footer>
-                <address>
-                    Para más información consultar <a href="https://parrot.acamica.com/" target="_blank">Parrot</a>
-                </address>
-            </footer>
         </section>
         <section>
 			<header class="header">
@@ -118,9 +143,43 @@
         <aside></aside> LATERAL: contenido tangencial.
     -->
     </main>
-    <footer> <!-- PIE: descenlace-->
+    <footer id="footer"> <!-- PIE: descenlace-->
+        <!-- form#contact>(lable+input[required])*2+lable+textarea+button+div{Todos los campos con asteriscos (*) son obligatorios} -->
+        <form action="" id="contact">
+            <h2>Contáctenos</h2>
+            <lable for="contactName">Nombre</lable>
+            <input 
+                name="contactName"
+                type="text"
+                required/>
+            <label for="contactEmail">Correo</label>
+            <input 
+		 		name="contactEmail" 
+		 		type="email" 
+		 		required/>
+            <label for="contactConsult">Consulta</label>
+            <textarea 
+		 		name="contactConsult" 
+		 		cols="30" 
+		 		rows="10" 
+                required></textarea>
+                <button>Enviar</button>
+            <div>Todos los campos con asteriscos (*) son obligatorios</div>
+        </form>
+        <!-- .social>a*3[href="https://.com" target="_blank"]{$} -->
+        <div class="social">
+            <a href="https://.com" target="_blank">1</a>
+            <a href="https://.com" target="_blank">2</a>
+            <a href="https://.com" target="_blank">3</a>
+        </div>
+        <p>
+            &copy; Todos los derechos reservados
+            <a href="#"> Jonathan Kim</a>
+            &amp; Compañía
+        </p>
     </footer>
-    <script src="js/scripts.js"></script> <!-- SCRIPTS-->
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
