@@ -5,9 +5,9 @@
     <meta
         name="viewport"
         content="
-        width=device-width,
-        initial-scale=1.0,
-        maximum-scale=3"> <!-- El zoom original en las páginas es de 5 (500%), con 3 se limita a 300% -->
+			width=device-width,
+			initial-scale=1.0,
+			maximum-scale=3"> <!-- El zoom original en las páginas es de 5 (500%), con 3 se limita a 300% -->
     <title>Maquetación Web</title>
     <link rel="icon" href="assets/icon/cr.png">
     <!-- Styles -->
@@ -110,12 +110,12 @@
 							<li>
 								BLOCK: 
 									ocupa todo su contenedor, 
-									genera salto de linea (no comparte espacio),
+									genera salto de línea (no comparte espacio),
 									se les puede definir tamaño (contenedores);
 							</li>
 							<li>
 								INLINE:
-									ocupa en ancho de su contenido,
+									ocupa el ancho de su contenido,
 									comparte espacio con otras etiquetas,
 									su tamaño es automatico - ancho (contenido);
 							</li>
@@ -166,7 +166,7 @@
 					Es una herramienta que permite indicar a un contenedor la forma en la que se van a distribuir y organizar sus elementos
 					a diferencia de los valores vistos anteriormente que corresponden al atributo <strong>display</strong> y modifican la forma en la que
 					se representa el elemento seleccionado, <strong>flexbox</strong> actua sobre la etiqueta padre y afecta a las etiquetas que
-					sean hijos directos.
+					sean <em>hijos directos</em>.
 				</p>
 				<h2>Justify-content</h2>
 				<!-- div.exampe.flexbox>div*7{item $} -->
@@ -181,12 +181,12 @@
 				</div>
 				<!-- ul>h2{Justify-content}+li*6 -->
 				<ul>
-					<li><strong>Flex-start:</strong> Es el valor predeterminado y permite distribuir los elementos al principio del flex(izquierda).</li>
-					<li><strong>Flex-end:</strong> Permite distribuir los eleementos en orden hacia el final del flex (derecha).</li>
-					<li><strong>Center:</strong> Alínea todos los elementos hacia el centro del flex (horizontal).</li>
-					<li><strong>Space-around:</strong> Calcula la distancia que debe tener cada elemento y la aplica al flex. Las distancias entre los
+					<li><strong>Flex-start:</strong> Es el valor predeterminado y permite distribuir los elementos al principio del <em>flex</em> (izquierda).</li>
+					<li><strong>Flex-end:</strong> Permite distribuir los eleementos en orden hacia el final del <em>flex</em> (derecha).</li>
+					<li><strong>Center:</strong> Alínea todos los elementos hacia el centro del <em>flex</em> (horizontal).</li>
+					<li><strong>Space-around:</strong> Calcula la distancia que debe tener cada elemento y la aplica al <em>flex</em>. Las distancias entre los
 						elementos que se encuentran en el medio es mayor debido a que estas se suman.</li>
-					<li><strong>Space-between:</strong> Separa de extremo a extremo los elementos dentro del flex y la distancia resultante es equitativa
+					<li><strong>Space-between:</strong> Separa de extremo a extremo los elementos dentro del <em>flex</em> y la distancia resultante es equitativa
 						entre cada etiqueta, teniendo en cuenta que el primer y último elemento están en el límite de la caja del contenido.</li>
 					<li><strong>Space-evenly:</strong> Calcula exactamente la misma distancia de separación para cada etiqueta, quedando distribuido de manera precisa,
 					pero no es compatible con todos los navegadores.</li>
@@ -204,18 +204,24 @@
 				</div>
 				<!-- ul>li*5>strong -->
 				<ul>
-					<li><strong>Flex-start:</strong> A diferencia del atributo justify-content, no hay valor predeterminado y permite organizar a los elementos
-					al principio del flex (arriba).</li>
-					<li><strong>Flex-end:</strong> Organiza los elementos dentro del flex hacia el final del mismo. Es necesario que el contenedor posea un alto definido.</li>
+					<li><strong>Flex-start:</strong> A diferencia del atributo <em>justify-content</em>, no hay valor predeterminado y permite organizar a los elementos
+					al principio del <em>flex</em> (arriba).</li>
+					<li><strong>Flex-end:</strong> Organiza los elementos dentro del <em>flex</em> hacia el final del mismo. Es necesario que el contenedor posea un alto definido.</li>
 					<li><strong>Center:</strong> Organiza los elementos hacia el centro de la fila (verticalmente).</li>
 					<li><strong>Baseline:</strong> Acomoda las etiquetas independientemente de su tamaño de manera tal  que el texto quede alineado para mejor legibilidad</li>
-					<li><strong>Align-self:</strong> Atributo que permite a la etiqueta seleccionada dentro del flex cambiar su alineación con respecto a los demás elementos.</li>
+					<li><strong>Align-self:</strong> Atributo que permite a la etiqueta seleccionada dentro del <em>flex</em> cambiar su alineación con respecto a los demás elementos.</li>
 				</ul>
 				<hr/>
 				<h2>Flex-direction</h2>
 				<ul class="referencias">
-					<li><span class="limegreen"><strong> Align-items</strong></span></li>
-					<li><span class="tomato"><strong>Justify-content</strong></span></li>
+					<li>
+						<span class="limegreen"></span>
+						<strong> Align-items</strong>
+					</li>
+					<li>
+						<span class="tomato"></span>
+						<strong>Justify-content</strong>
+					</li>
 				</ul>
 				<div class="overflow">
 					<div class="example flexbox align col">
@@ -255,26 +261,6 @@
                 </header>
             </article>
         </section>
-        <section>
-			<header class="header">
-				<h1>Clase 2</h1>
-			</header>
-			<article>
-				<header>
-					<h1>Tema 1</h1>
-				</header>
-			</article>
-			<article>
-				<header>
-					<h1>Tema 2</h1>
-				</header>
-			</article>
-			<article>
-				<header>
-					<h1>Tema 3</h1>
-				</header>
-			</article>
-		</section>
     <!--
         <article></article> ARTÍCULO: independiente.
         <section></section> SECCIÓN: depende del contexto.
@@ -313,7 +299,7 @@
         <p>
             &copy; Todos los derechos reservados
             <a href="#"> Jonathan Kim</a>
-            &amp; Compañía
+            &amp; Compañía.
         </p>
     </footer>
     <!-- Scripts -->
