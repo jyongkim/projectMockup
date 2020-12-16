@@ -184,12 +184,9 @@
 					<li><strong>Flex-start:</strong> Es el valor predeterminado y permite distribuir los elementos al principio del <em>flex</em> (izquierda).</li>
 					<li><strong>Flex-end:</strong> Permite distribuir los eleementos en orden hacia el final del <em>flex</em> (derecha).</li>
 					<li><strong>Center:</strong> Alínea todos los elementos hacia el centro del <em>flex</em> (horizontal).</li>
-					<li><strong>Space-around:</strong> Calcula la distancia que debe tener cada elemento y la aplica al <em>flex</em>. Las distancias entre los
-						elementos que se encuentran en el medio es mayor debido a que estas se suman.</li>
-					<li><strong>Space-between:</strong> Separa de extremo a extremo los elementos dentro del <em>flex</em> y la distancia resultante es equitativa
-						entre cada etiqueta, teniendo en cuenta que el primer y último elemento están en el límite de la caja del contenido.</li>
-					<li><strong>Space-evenly:</strong> Calcula exactamente la misma distancia de separación para cada etiqueta, quedando distribuido de manera precisa,
-					pero no es compatible con todos los navegadores.</li>
+					<li><strong>Space-around:</strong> Calcula la distancia que debe tener cada elemento y la aplica al <em>flex</em>. Las distancias entre los elementos que se encuentran en el medio es mayor debido a que estas se suman.</li>
+					<li><strong>Space-between:</strong> Separa de extremo a extremo los elementos dentro del <em>flex</em> y la distancia resultante es equitativa entre cada etiqueta, teniendo en cuenta que el primer y último elemento están en el límite de la caja del contenido.</li>
+					<li><strong>Space-evenly:</strong> Calcula exactamente la misma distancia de separación para cada etiqueta, quedando distribuido de manera precisa, pero no es compatible con todos los navegadores.</li>
 				</ul>
 				<hr/>
 				<h2>Align-items</h2>
@@ -204,8 +201,7 @@
 				</div>
 				<!-- ul>li*5>strong -->
 				<ul>
-					<li><strong>Flex-start:</strong> A diferencia del atributo <em>justify-content</em>, no hay valor predeterminado y permite organizar a los elementos
-					al principio del <em>flex</em> (arriba).</li>
+					<li><strong>Flex-start:</strong> A diferencia del atributo <em>justify-content</em>, no hay valor predeterminado y permite organizar a los elementos al principio del <em>flex</em> (arriba).</li>
 					<li><strong>Flex-end:</strong> Organiza los elementos dentro del <em>flex</em> hacia el final del mismo. Es necesario que el contenedor posea un alto definido.</li>
 					<li><strong>Center:</strong> Organiza los elementos hacia el centro de la fila (verticalmente).</li>
 					<li><strong>Baseline:</strong> Acomoda las etiquetas independientemente de su tamaño de manera tal  que el texto quede alineado para mejor legibilidad</li>
@@ -255,12 +251,171 @@
 						<span>Item 7</span>
 				</div>
             </article>
-            <article>
-                <header>
-                    <h1>Tema 3</h1>
-                </header>
-            </article>
-        </section>
+			<article class="flex">
+				<header>
+					<h1>Presentacion de elementos</h1>
+				</header>
+				<div>
+					<h2>titulo 1</h2>
+					<p>lorem</p>
+					<img src="" alt="Imagen 1">
+					<button>ver mas...</button>
+				</div>
+				<div>
+					<h2>titulo 2</h2>
+					<p>lorem</p>
+					<img src="" alt="Imagen 2">
+					<button>ver mas...</button>
+				</div>
+				<div>
+					<h2>titulo 3</h2>
+					<p>lorem</p>
+					<img src="" alt="Imagen 3">
+					<button>ver mas...</button>
+				</div>
+			</article>
+		</section>
+		<section class="pseudo">
+			<header class="header">
+				<h1>Pseudo</h1>
+			</header>
+			<ul>
+				<li>
+					<h1>:Pseudo-clases</h1>
+					Estado o caracteristica de un elemento sobre el cual podemos trabajar para editar la etiqueta en cuestion.
+					<ul>
+						<li>:first-child - Primer hijo de un contenedor</li>
+						<li>:hover - Cuando pasamos el mouse sobre un elemento </li>
+						<li>:focus - Cuando seleccionamos y estamos sobre el elemento (a / input / textarea / select / button)</li>
+						<li><a href="#">:link</a>  - Hipervínculo sin visitar</li>
+						<li><a href="#visited">:visited</a> - Hipervínculo visitado</li>
+						<li><a href="#active">:active</a> - Momento de selección del hipervínculo</li>
+						<li>:last-child - Último hijo de un contenedor</li>
+						<li>:first-of-type</li>
+						<li>:last-of-type</li>
+					</ul>
+				</li>
+				<a class="imagen" href=""></a>
+				<a class="imagen" href=""></a>
+				<a class="imagen" href=""></a>
+				<li>
+					<h1>::Pseudo-Elementos</h1> 
+					Parte interna de un elemento a la que se le puede aplicar estilos independientemente de su contenedor.
+					<ul>
+						<li>::first-line - Primera línea de un elemento</li>
+						<li>::first-letter - Primera letra de un elemento</li>
+						<li>::before - Contenido antes del contenido</li>
+						<li>::after - Contenido despues del contenido</li>
+					</ul>
+				</li>
+				<p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur pariatur maxime soluta amet, sit? Ad dolorem commodi laboriosam, rem earum vel, alias repellat unde, aliquam quos velit cumque sunt. Eligendi. </p>
+				<p> Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Voluptates nihil facere corporis nostrum laudantium dolorum earum architecto similique ratione laborum, nulla debitis! Perspiciatis illo quod ipsam maiores assumenda sit voluptatum. </p>
+				<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio debitis nam quisquam, sapiente tempore officia reprehenderit et maiores vero pariatur nesciunt assumenda nisi dolore id, similique optio dolores illo culpa? </p>
+				<p> Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Hic modi reiciendis voluptas. Facilis ea cumque voluptates quia quibusdam, ipsum saepe pariatur doloribus! Molestias sunt voluptatum sapiente iusto nisi facere voluptatem! </p>
+				<p> Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Iusto maxime excepturi, ratione. Culpa doloremque voluptatum eos itaque repellendus magni. Esse sunt ad illo fuga consequatur dolores itaque natus officiis nobis. </p>
+			</ul>
+			<ul class="indice">
+				<li>Tema
+					<ul>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Tema
+					<ul>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Tema
+					<ul>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+						<li>Subtema
+							<ul>
+								<li>Sub-subtema</li>
+								<li>Sub-subtema</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<header class="header">
+				<h1></h1>
+			</header>
+		</section>
+		<section>
+			<header class="header">
+				<h1></h1>
+			</header>
+		</section>
+		<section>
+			<header class="header">
+				<h1></h1>
+			</header>
+		</section>
     <!--
         <article></article> ARTÍCULO: independiente.
         <section></section> SECCIÓN: depende del contexto.

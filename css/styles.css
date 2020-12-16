@@ -107,7 +107,6 @@ main{
     margin-right:.5rem;
     max-width: 400px;
 }
-
 /*Flexbox*/
 .flexbox{
     display: flex;
@@ -115,7 +114,6 @@ main{
     justify-content: space-evenly;
     margin-top: 1rem;
 }
-
 .flexbox div,
 .flexbox span{
     width: 150px;
@@ -124,12 +122,10 @@ main{
     color:#ccc;
     background-color: #333;
 }
-
 .align{
     height: 300px;
     align-items: baseline;
 }
-
 .align span{
     font-size: 1.2rem;
     align-self: flex-end;
@@ -139,38 +135,174 @@ main{
     border-left: .4rem dashed limegreen;
     border-top: .4rem dashed tomato;
 }
-
 .row-r{
     flex-direction: row-reverse;
     border-top: .4rem dashed limegreen;
     border-right: .4rem dashed tomato;
 }
-
 .col-r{
     flex-direction: column-reverse;
     border-left: .4rem dashed limegreen;
     border-bottom: .4rem dashed tomato;
 }
-
 .overflow{
     overflow: auto;
-    height: 20rem;
+    height: 19rem;
 }
-
 .referencias span{
     display: inline-block;
     border: 2px solid black;
-    padding: 0.5rem;
+    padding: .5rem;
 }
-
 .tomato{
     background-color: tomato;
 }
-
 .limegreen{
     background-color: limegreen;
 }
-
+/*Aplicando Flexbox*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:1rem auto;
+}
+.flex header{
+    width:100%;
+    text-align: center;
+    color:#ccc;
+    background-color: #333;
+}
+.flex > div{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    min-width: 300px;
+    margin:.25rem;
+    border:2px solid #333;
+    padding:1rem;
+    background-color: #ccc;
+    text-align: center;
+}
+/* Pseudo-clases - Estado o característica de un elemento */
+.pseudo ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    background-color: rgba(51,51,51,.5);
+}
+.pseudo li{
+    color:#ccc;
+    padding:.5rem;
+}
+.pseudo li:first-child{
+    background-color: rgba(51,51,51,.5);
+}
+.pseudo li:last-child{
+    background-color: rgba(204,204,204,.5);
+}
+.pseudo li:hover{
+    color:#999;
+}
+.pseudo a:link{
+    color:#ccc;
+}
+.pseudo a:visited{
+    color:skyblue;
+}
+.pseudo a:active{
+    background-color: #333;
+}
+.imagen{
+    display: inline-block;
+    width:150px;
+    height: 200px;
+    margin:.2rem;
+    padding:0;
+    border:2px solid #333;
+    background-image: url(../assets/img/jjba-echoes-act2-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* Estados del elemento <a> */
+    .imagen:hover{
+    background-image: url(../assets/img/jjba-echoes-act2-02.jpg);
+}
+.imagen:active{
+    background-image: url(../assets/img/jjba-echoes-act2-03.jpg)
+}
+/* Primer elemento de su tipo <a> */
+.imagen:first-of-type{
+    background-image: url(../assets/img/jjba-echoes-act1-01.jpg)
+}
+.imagen:first-of-type:hover{
+    background-image: url(../assets/img/jjba-echoes-act1-02.jpg)
+}
+.imagen:first-of-type:active{
+    background-image: url(../assets/img/jjba-echoes-act1-03.jpg)
+}
+/* Último elemento de su tipo <a> */
+.imagen:last-of-type{
+    background-image: url(../assets/img/jjba-echoes-act3-01.jpg)
+}
+.imagen:last-of-type:hover{
+    background-image: url(../assets/img/jjba-echoes-act3-02.jpg)
+}
+.imagen:last-of-type:active{
+    background-image: url(../assets/img/jjba-echoes-act3-03.jpg)
+}
+.pseudo p{
+    padding:1rem;
+}
+/* Pseudo-elementos - Partes o elementos de un contenido */
+.pseudo p:first-line{
+    color:navy;
+    font-weight: bold;
+}
+.pseudo p:first-of-type::first-letter{
+    float: left;
+    margin-right: .5rem;
+    font: 4rem times new roman, sans-serif;
+}
+/* after & before - Elementos de línea*/
+.pseudo p::before{
+    content:'BEFORE Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab soluta deleniti, quasi, consequatur ipsum necessitatibus suscipit. Omnis laudantium nam ex nostrum ipsa et suscipit autem aspernatur, modi odio sit aliquam? BEFORE';
+    color:whitesmoke;
+}
+.pseudo p::after{
+    content: 'AFTER ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quo mollitia ad nobis illum, reprehenderit incidunt veritatis quas laboriosam perferendis tempore sequi temporibus distinctio nemo aut accusamus, deleniti, autem similique. AFTER';
+    background-color: lightgrey;
+}
+/* Contadores */
+main{
+    counter-reset: clase;
+}
+main .header h1::before{
+    counter-increment: clase;
+    content: 'Clase ' counter(clase) ' - ';
+}
+section{
+    counter-reset: tema;
+}
+section h1::before{
+    counter-increment: tema;
+    content: 'Tema ' counter(tema) ' - ';
+}
+/*Tabla de contenidos*/
+.indice li,
+.indice li:first-child,
+.indice li:last-child{
+    padding: .2rem 0;
+    background-color: #333;
+}
+.indice li:before{
+    content:
+    counter(primero)'.'
+    counter(segundo)'.'
+    counter(tercero)'.'
+    counter(cuarto)' - ';			
+}
 /*Formulario*/
 #contact{
     min-width: 100px;
