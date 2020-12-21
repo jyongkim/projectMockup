@@ -290,12 +290,29 @@ section h1::before{
     content: 'Tema ' counter(tema) ' - ';
 }
 /*Tabla de contenidos*/
+ul.indice{
+    padding: 1rem;
+    background-color: #333;
+}
+
 .indice li,
 .indice li:first-child,
 .indice li:last-child{
     padding: .2rem 0;
     background-color: #333;
 }
+
+/*Parámetros*/
+.indice {counter-reset: primero;}
+.indice li {counter-increment: primero;}
+.indice li ul {counter-reset: segundo;}
+.indice li ul li {counter-increment: segundo;}
+.indice li li ul {counter-reset: tercero;}
+.indice li li li {counter-increment: tercero;}
+.indice li li li ul {counter-reset: cuarto;}
+.indice li li li li {counter-increment: cuarto;}
+
+/*Aplicación*/
 .indice li:before{
     content:
     counter(primero)'.'
@@ -303,6 +320,56 @@ section h1::before{
     counter(tercero)'.'
     counter(cuarto)' - ';			
 }
+
+/*CSS Grid*/
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto; /*Columnas: cantidad x tamaño */
+    grid-template-rows: auto; /*Alto de filas*/
+    /* column-gap: 1rem;
+    row-gap: .5rem; */
+    gap: 1rem; /*X (filas) Y (columnas)*/
+}
+.grid span:first-of-type{
+    grid-column: 1 / 4; /*Start | End*/
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-row-start: 1 ;
+}
+
+.grid span:last-of-type{
+    grid-row: 3 / 5;
+}
+
+.grid div,
+.grid span{
+    border: 2px dotted #333;
+    padding: .5rem;
+    background-color: #999;
+}
+
+.content{
+    height: 300px;
+    justify-content: center;
+    align-content: center;
+}
+
+.areas{
+    grid-template-areas:
+        'header header header'
+        'long-a long-a aside'
+        'long-b long-b aside'
+        'sec-a  sec-b  aside'
+        'sec-c  sec-d  aside'
+        'footer footer footer'
+}
+
+.areas div:first-child{grid-area: header;}
+.areas div:last-child{grid-area: footer;}
+.areas span:first-of-type{grid-area: aside;}
+.areas span + div {grid-area: long-a;}
+.areas span + div + div{grid-area: long-b;}
+
 /*Formulario*/
 #contact{
     min-width: 100px;
