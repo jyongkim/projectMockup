@@ -253,7 +253,7 @@
             </article>
 			<article class="flex">
 				<header>
-					<h1>Presentacion de elementos</h1>
+					<h1>Presentación de elementos</h1>
 				</header>
 				<div>
 					<h2>titulo 1</h2>
@@ -407,8 +407,105 @@
 		</section>
 		<section>
 			<header class="header">
-				<h1></h1>
+				<h1>CSS Grid</h1>
 			</header>
+			<article>
+				<header>
+					<h1>Sistema de Grilla</h1>
+				</header>
+				<div class="example grid">
+					<div> Celda 1</div>
+					<div> Celda 2</div>
+					<div> Celda 3</div>
+					<div> Celda 4</div>
+					<div> Celda 5</div>
+					<div> Celda 6</div>
+					<span> Celda 7</span>
+					<span> Celda 8</span>
+					<div> Celda 9</div>
+				</div>
+				<ul>
+					<li>
+						<strong>Grid-template-columns: </strong>
+						Define el ancho de las columnas de nuestra grilla, así como también la <em>cantidad de las mismas mediante la repetición de valores</em>, por defecto al aplicar CSS-Grid se utiliza una única columna.
+					</li>
+					<li>
+						<strong>Grid-template-rows: </strong> 
+						Define el alto de las filas especificadas, a diferencia de <em>grid-template-columns</em> donde cada valor representa una columna, aquí simplemente definimos el tamaño pero no la cantidad, por defecto este es <em>auto</em>.
+					</li>
+					<li>
+						<strong>Gap: </strong> 
+						Separación entre filas y columnas respectivamente, es independiente al margin de los elementos internos y posee dos versiones individuales del atributo <em>row-gap</em> y <em>column-gap</em>.
+					</li>
+					<li>
+						<strong>Grid-column: </strong>
+						Atajo que permite indicar a un elemento hijo su posición, simplificando los atributo <em>grid-column-start</em> / <em>grid-column-end</em> tomando en cuenta que cada línea imaginaria a la izquierda representa el comienzo de las mismas.
+					</li>
+					<li>
+						<strong>Grid-row: </strong>
+						Atajo que permite indicar a un elemento hijo su posición, simplificando los atributo <em>grid-row-start</em> / <em>grid-row-end</em> tomando en cuenta que cada línea imaginaria desde arriba representa el comienzo de las mismas.
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h1>Organización y distribución</h1>
+				</header>
+				<div class="example grid content">
+					<div>Celda 1</div>
+					<div>Celda 2</div>
+					<div>Celda 3</div>
+					<div>Celda 4</div>
+					<div>Celda 5</div>
+					<div>Celda 6</div>
+					<div>Celda 7</div>
+					<div>Celda 8</div>
+					<div>Celda 9</div>
+				</div>
+				<ul>
+					<li>
+						<strong>Justify-content: </strong>
+						Indica cómo se van a distribuir las celdas dentro del contenedor de forma horizontal, toma exactamente los mismos valores que <em>flexbox</em> y no posee valor predeterminado.
+						<ul>
+							<li>Flex-start: izquierda</li>
+							<li>Flex-end: derecha</li>
+							<li>Center: centro horizontal</li>
+							<li>Space-around: espacio entre elementos</li>
+							<li>Space-between: espacio extremo a extremo</li>
+							<li>Space-evenly: espacio equitativo</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Alig-content: </strong>
+						Indica cómo se van a organizar las celdas dentro del contenedor de forma vertical y a diferencia de <em>align-items</em>, también admite los valores de justify-content.
+						<ul>
+							<li>Flex-start: arriba</li>
+							<li>Flex-end: abajo</li>
+							<li>Center: centro vertical</li>
+							<li>Space-around: espacio entre elementos</li>
+							<li>Space-between: espacio extremo a extremo</li>
+							<li>Space-evenly: espacio equitativo</li>
+							<li>Baseline: en base a la tipografia</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h1>Plantilla de áreas</h1>
+				</header>
+				<div class="example grid areas">
+					<div>1: HEADER</div>
+					<div>2: SECTION</div>
+					<div>3: SECTION</div>
+					<div>4: SECTION</div>
+					<span>5: ASIDE</span>
+					<div>6: LONG</div>
+					<div>7: LONG</div>
+					<div>8: SECTION</div>
+					<div>9: FOOTER </div>
+				</div>
+			</article>
 		</section>
 		<section>
 			<header class="header">
