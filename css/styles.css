@@ -17,6 +17,7 @@ font-family: Raleway, Open sans, Segoe ui, sans-serif;
 body{
     margin:0;
 }
+
 /*Cabecera y pie*/
 #header, 
 main .header, 
@@ -50,6 +51,7 @@ main .header h1{
     text-transform: uppercase;
 	letter-spacing: 8px;
 }
+
 /*Navegación*/
 .menu{
     list-style: none;
@@ -83,6 +85,7 @@ main .header h1{
 .menu li:hover{
     background-color: rgba(206,206,206,.3);
 }
+
 /*Contenido principal*/
 main{
     max-width:1140px;
@@ -96,6 +99,7 @@ main{
     padding: 16px;
     background-color: #ddd;
 }
+
 /*float y overflow*/
 .float p{
     overflow: hidden;
@@ -107,6 +111,7 @@ main{
     margin-right:.5rem;
     max-width: 400px;
 }
+
 /*Flexbox*/
 .flexbox{
     display: flex;
@@ -160,6 +165,7 @@ main{
 .limegreen{
     background-color: limegreen;
 }
+
 /*Aplicando Flexbox*/
 .flex{
     display: flex;
@@ -184,6 +190,7 @@ main{
     background-color: #ccc;
     text-align: center;
 }
+
 /* Pseudo-clases - Estado o característica de un elemento */
 .pseudo ul{
     list-style: none;
@@ -225,6 +232,7 @@ main{
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 /* Estados del elemento <a> */
     .imagen:hover{
     background-image: url(../assets/img/jjba-echoes-act2-02.jpg);
@@ -232,6 +240,7 @@ main{
 .imagen:active{
     background-image: url(../assets/img/jjba-echoes-act2-03.jpg)
 }
+
 /* Primer elemento de su tipo <a> */
 .imagen:first-of-type{
     background-image: url(../assets/img/jjba-echoes-act1-01.jpg)
@@ -242,6 +251,7 @@ main{
 .imagen:first-of-type:active{
     background-image: url(../assets/img/jjba-echoes-act1-03.jpg)
 }
+
 /* Último elemento de su tipo <a> */
 .imagen:last-of-type{
     background-image: url(../assets/img/jjba-echoes-act3-01.jpg)
@@ -255,6 +265,7 @@ main{
 .pseudo p{
     padding:1rem;
 }
+
 /* Pseudo-elementos - Partes o elementos de un contenido */
 .pseudo p:first-line{
     color:navy;
@@ -265,6 +276,7 @@ main{
     margin-right: .5rem;
     font: 4rem times new roman, sans-serif;
 }
+
 /* after & before - Elementos de línea*/
 .pseudo p::before{
     content:'BEFORE Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab soluta deleniti, quasi, consequatur ipsum necessitatibus suscipit. Omnis laudantium nam ex nostrum ipsa et suscipit autem aspernatur, modi odio sit aliquam? BEFORE';
@@ -274,6 +286,7 @@ main{
     content: 'AFTER ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quo mollitia ad nobis illum, reprehenderit incidunt veritatis quas laboriosam perferendis tempore sequi temporibus distinctio nemo aut accusamus, deleniti, autem similique. AFTER';
     background-color: lightgrey;
 }
+
 /* Contadores */
 main{
     counter-reset: clase;
@@ -289,6 +302,7 @@ section h1::before{
     counter-increment: tema;
     content: 'Tema ' counter(tema) ' - ';
 }
+
 /*Tabla de contenidos*/
 ul.indice{
     padding: 1rem;
@@ -300,6 +314,7 @@ ul.indice{
     padding: .2rem 0;
     background-color: #333;
 }
+
 /*Parámetros*/
 .indice {counter-reset: primero;}
 .indice li {counter-increment: primero;}
@@ -309,6 +324,7 @@ ul.indice{
 .indice li li li {counter-increment: tercero;}
 .indice li li li ul {counter-reset: cuarto;}
 .indice li li li li {counter-increment: cuarto;}
+
 /*Aplicación*/
 .indice li:before{
     content:
@@ -317,6 +333,7 @@ ul.indice{
     counter(tercero)'.'
     counter(cuarto)' - ';			
 }
+
 /*CSS Grid*/
 .grid {
     display: grid;
@@ -360,6 +377,7 @@ ul.indice{
 .areas span:first-of-type{grid-area: aside;}
 .areas span + div {grid-area: long-a;}
 .areas span + div + div{grid-area: long-b;}
+
 /*Formulario*/
 #contact{
     min-width: 100px;
@@ -407,6 +425,7 @@ ul.indice{
     color: #124;
     background-color: #ccc;
 }
+
 /*Redes sociales*/
 .social{
     max-width: 360px;
