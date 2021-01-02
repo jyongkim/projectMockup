@@ -378,6 +378,24 @@ ul.indice{
 .areas span + div {grid-area: long-a;}
 .areas span + div + div{grid-area: long-b;}
 
+section{
+    display: grid;
+    grid-template-columns: auto 30%;
+    grid-template-areas: 
+        'section header '
+        'article header '
+        'aside header ';
+    gap: 1rem;
+}
+
+section .header{
+    grid-area: header;
+}
+
+section .header h1{
+    line-height: 1.5rem;
+}
+
 /*Formulario*/
 #contact{
     min-width: 100px;
