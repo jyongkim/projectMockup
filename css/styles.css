@@ -393,9 +393,16 @@ section .header{
 }
 
 section .header h1{
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
+section .header::before,
+section .header::after{
+    content:'';
+    height: 5px;
+    display: block;
+    background: linear-gradient(to right, #999, #eee);
+ }
 /*Formulario*/
 #contact{
     min-width: 100px;
