@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        .position {
+            max-width: 900px;
+            height: 600px;
+            border: .2rem solid #333;
+        }
+
+        .position div, span{
+            border: .2rem dashed #eee;
+            padding: 1rem;
+            background-color: #ccc;
+        }
+
+        .absolute{
+            /* El elemento toma de referencia al ancestro más próximo cuyo atributo position NO sea STATIC.
+            En caso de no existir se toma de referencia la ventana (el 'body'). El elemento ya no forma parte
+            del FLOW del documento. */
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="position">
+        <div>Position </div>
+        <div>Static </div>
+        <div class="absolute">Absolute </div>
+        <div>Position </div>
+        <div>Position </div>
+    </div>
+</body>
+</html>

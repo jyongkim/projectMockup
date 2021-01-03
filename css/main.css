@@ -1,0 +1,31 @@
+/* Content first */
+    /* Reglas generales */
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{margin: 0;}
+    /* Navegación */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #eee; /*Red Green Blue = rgb*/
+
+        }
+
+        nav a {
+            display: block;
+            padding: .5rem;
+            color: #333;
+            text-decoration: none;
+        }
+        .menu {
+            flex-wrap: nowrap;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
