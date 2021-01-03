@@ -51,12 +51,23 @@
             la página. */
 
             position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+        }
+
+        .sticky{
+            /* El elemento permanece en su posición original, similar a relative pero a diferencia de éste
+            cuando definimos valores como TOP, BOTTOM, RIGHT o LEFT, al cumplirse la condición con respecto
+            al VIEWPORT se muestra como un elemento con position ABSOLUTE. */
+            
+            position: sticky;
+            top: 1rem;
         }
     </style>
 </head>
 <body>
     <div class="position">
-        <div>Position </div>
+        <div class="sticky">Sticky </div>
         <div>Static </div>
         <div class="absolute">Absolute </div>
         <div class="relative">Relative </div>
