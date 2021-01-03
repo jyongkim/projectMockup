@@ -410,7 +410,7 @@ section .header::after{
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #248;
+    background-color: #36C;
 }
 
 .desplegable a{
@@ -418,6 +418,10 @@ section .header::after{
     padding: .5rem;
     color: #ccc;
     text-decoration: none;
+}
+
+.desplegable li:hover{
+    background-color: rgba(204, 204, 204, .5);
 }
 
 .desplegable ul{
@@ -437,6 +441,12 @@ section .header::after{
     position: absolute;
     top: 100%;
     left: 0;
+}
+
+.desplegable li li:hover > ul{
+    top: 0;
+    left: 100%;
+    background-color: #248;
 }
 
 /*Formulario*/
