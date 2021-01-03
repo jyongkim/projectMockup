@@ -33,15 +33,20 @@
             right: 0;
         }
 
-        .relative{
+        .position:hover .absolute {
+            bottom: 0;
+        }
+
+        .position:hover .relative {
             /* El elemento se toma como referente a sí mismo, sin importar que solamente existan ancestros con
             position STATIC, en este caso, los atributos TOP, RIGHT, BOTTOM y LEFT técnicamente funcionarían
             de manera inversa, así comon pasa con position ABSOLUTE, cuando modificamos la posición de la etiqueta,
             ésta no afecta al FLOW del documento. */
 
             position: relative;
-            top: 2rem;
-            left: 2rem;
+            top: .5rem;
+            left: .5rem;
+            box-shadow: -.5rem -.5rem #333;
         }
 
         .fixed {
@@ -55,14 +60,20 @@
             right: 1rem;
         }
 
+        .position:hover .fixed{
+            bottom: 5rem;
+            box-shadow: 0 .5rem 4px #333;
+
+        }
         .sticky{
-            /* El elemento permanece en su posición original, similar a relative pero a diferencia de éste
+            /* El elemento es su propio referente y  permanece en su posición original, similar a relative pero a diferencia de éste
             cuando definimos valores como TOP, BOTTOM, RIGHT o LEFT, al cumplirse la condición con respecto
             al VIEWPORT se muestra como un elemento con position ABSOLUTE. */
             
             position: sticky;
-            top: 1rem;
+            top: 0;
         }
+
     </style>
 </head>
 <body>
