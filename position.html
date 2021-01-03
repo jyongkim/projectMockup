@@ -10,9 +10,11 @@
 
         }
         .position {
+            position: relative;
             max-width: 900px;
             height: 600px;
             border: .2rem solid #333;
+            padding: 1rem;
         }
 
         .position div, span{
@@ -24,8 +26,31 @@
         .absolute{
             /* El elemento toma de referencia al ancestro más próximo cuyo atributo position NO sea STATIC.
             En caso de no existir se toma de referencia la ventana (el 'body'). El elemento ya no forma parte
-            del FLOW del documento. */
+            del FLOW del documento. Se considera de bloque y ocupa, por defecto, su posición original y
+            en caso de cambiarla se ubica dentro del contenedor. */
             position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .relative{
+            /* El elemento se toma como referente a sí mismo, sin importar que solamente existan ancestros con
+            position STATIC, en este caso, los atributos TOP, RIGHT, BOTTOM y LEFT técnicamente funcionarían
+            de manera inversa, así comon pasa con position ABSOLUTE, cuando modificamos la posición de la etiqueta,
+            ésta no afecta al FLOW del documento. */
+
+            position: relative;
+            top: 2rem;
+            left: 2rem;
+        }
+
+        .fixed {
+            /* El elemento toma como referente al VIEWPORT (la ventana del navegador), al igual que ABSOLUTE,
+            por defecto ocupa su posición original pero a diferencia de éste cuando establecemos los valores de
+            posición siempre permanece anclado en la ventana indistitnamente de la posición respecto al scroll de
+            la página. */
+
+            position: fixed;
         }
     </style>
 </head>
@@ -34,8 +59,15 @@
         <div>Position </div>
         <div>Static </div>
         <div class="absolute">Absolute </div>
+        <div class="relative">Relative </div>
+        <div class="fixed">Fixed </div>
+    </div>
+    <div class="position">
         <div>Position </div>
-        <div>Position </div>
+        <div>Static </div>
+        <div class="absolute">Absolute </div>
+        <div class="relative">Relative </div>
+        <div class="fixed">Fixed </div>
     </div>
 </body>
 </html>
