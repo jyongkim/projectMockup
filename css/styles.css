@@ -449,6 +449,14 @@ section .header::after{
     background-color: #248;
 }
 
+/*Sprites*/
+.sprite a{
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    border: 2px solid #333;
+}
+
 /*Formulario*/
 #contact{
     min-width: 100px;
