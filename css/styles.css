@@ -452,12 +452,31 @@ section .header::after{
 /*Sprites*/
 .sprite a{
     display: inline-block;
-    width: 84px;
-    height: 84px;
+    width: calc(84px);
+    height: calc(84px);
     border: 2px solid #333;
+    background-color: #eee;
+    background-image: url(../assets/icon/social-media.png);
 }
 
-/*Formulario*/
+    /*Estado base*/
+    .tw{background-position: calc(84px * -8) calc(84px * 0);}
+    .in{background-position: calc(84px * -4) calc(84px * 0);}
+    .yt{background-position: calc(84px * -10) calc(84px * 0);}
+
+    /*Estado hover*/
+    .fb:hover{background-position: calc(84px * 0) calc(84px * -2);}
+    .tw:hover{background-position: calc(84px * -8) calc(84px * -2);}
+    .in:hover{background-position: calc(84px * -4) calc(84px * -2);}
+    .yt:hover{background-position: calc(84px * -10) calc(84px * -2);}
+
+    /*Estado active*/
+    .fb:active{background-position: calc(84px * 0) calc(84px * -1);}
+    .tw:active{background-position: calc(84px * -8) calc(84px * -1);}
+    .in:active{background-position: calc(84px * -4) calc(84px * -1);}
+    .yt:active{background-position: calc(84px * -10) calc(84px * -1);}
+
+    /*Formulario*/
 #contact{
     min-width: 100px;
     max-width: 720px;
