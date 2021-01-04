@@ -450,31 +450,35 @@ section .header::after{
 }
 
 /*Sprites*/
+.sprite{
+    --icon-size: 48px;
+}
 .sprite a{
     display: inline-block;
-    width: calc(84px);
-    height: calc(84px);
+    width: calc(var(--icon-size) * 1);
+    height: calc(var(--icon-size) * 1);
     border: 2px solid #333;
     background-color: #eee;
+    background-size: calc(var(--icon-size) * 11);
     background-image: url(../assets/icon/social-media.png);
 }
 
     /*Estado base*/
-    .tw{background-position: calc(84px * -8) calc(84px * 0);}
-    .in{background-position: calc(84px * -4) calc(84px * 0);}
-    .yt{background-position: calc(84px * -10) calc(84px * 0);}
+    .tw{background-position: calc(var(--icon-size) * -8) calc(var(--icon-size) * 0);}
+    .in{background-position: calc(var(--icon-size) * -4) calc(var(--icon-size) * 0);}
+    .yt{background-position: calc(var(--icon-size) * -10) calc(var(--icon-size) * 0);}
 
     /*Estado hover*/
-    .fb:hover{background-position: calc(84px * 0) calc(84px * -2);}
-    .tw:hover{background-position: calc(84px * -8) calc(84px * -2);}
-    .in:hover{background-position: calc(84px * -4) calc(84px * -2);}
-    .yt:hover{background-position: calc(84px * -10) calc(84px * -2);}
+    .fb:hover{background-position: calc(var(--icon-size) * 0) calc(var(--icon-size) * -2);}
+    .tw:hover{background-position: calc(var(--icon-size) * -8) calc(var(--icon-size) * -2);}
+    .in:hover{background-position: calc(var(--icon-size) * -4) calc(var(--icon-size) * -2);}
+    .yt:hover{background-position: calc(var(--icon-size) * -10) calc(var(--icon-size) * -2);}
 
     /*Estado active*/
-    .fb:active{background-position: calc(84px * 0) calc(84px * -1);}
-    .tw:active{background-position: calc(84px * -8) calc(84px * -1);}
-    .in:active{background-position: calc(84px * -4) calc(84px * -1);}
-    .yt:active{background-position: calc(84px * -10) calc(84px * -1);}
+    .fb:active{background-position: calc(var(--icon-size) * 0) calc(var(--icon-size) * -1);}
+    .tw:active{background-position: calc(var(--icon-size) * -8) calc(var(--icon-size) * -1);}
+    .in:active{background-position: calc(var(--icon-size) * -4) calc(var(--icon-size) * -1);}
+    .yt:active{background-position: calc(var(--icon-size) * -10) calc(var(--icon-size) * -1);}
 
     /*Formulario*/
 #contact{
