@@ -384,7 +384,7 @@ section{
     grid-template-areas: 
         'section header '
         'article header '
-        'aside header ';
+        'aside   header ';
     gap: 1rem;
 }
 
